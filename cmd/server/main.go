@@ -19,8 +19,8 @@ func main() {
 	}
 
 	// Postgres database
-	dbURl := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", "admin", "testDB",
-		"localhost", "5455", "postgres")
+	dbURl := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", "tmtube_admin", "22tmtubeadmin22",
+		"192.168.1.61", "5454", "tmtube_db")
 	db, err := pgxpool.Connect(context.Background(), dbURl)
 	if err != nil {
 		log.Fatalf("Failed to connect to db")
